@@ -1,24 +1,51 @@
-# README
+# SUPERHEROES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API that tracks superheroes and their awesome super powers.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+_For those that intend to make contributions or modify this project to suit their needs._
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems: `bundle install`.
 
-* Configuration
+Next, migrate the database: `rails db:migrate`.
 
-* Database creation
+Seed the database with some initial data: `rails db:seed`.
 
-* Database initialization
+Finally, start the server: `rails server`.
 
-* How to run the test suite
+You can then access the API at `http://localhost:3000/`.
 
-* Services (job queues, cache servers, search engines, etc.)
+## API Live link
 
-* Deployment instructions
+_In case you just want to connect the API to a frontend solution without interacting with the API code itself_:
 
-* ...
+https://superheroes-a7fu.onrender.com/
+
+## API Endpoints
+
+The following endpoints are available in the API:
+
+### Hero
+
+- **GET** `/hero/:id` - Retrieves a specific hero.
+- **GET** `/hero/` - Retrieves all heroes saved in the database.
+
+### Powers
+
+- **PATCH** `/power/:id` - Updates power name and description.
+- **GET** `/power/:id` - Retrieves a specific superpower.
+- **GET** `/hero/` - Retrieves all superpowers saved in the database.
+
+### HeroPower
+
+- **POST** `/hero_power` - This route should create a new `HeroPower` that is associated with an
+  existing `Power` and `Hero`
+
+
+
+_This project has been done by:_
+
+Shaun Mwangi
+
+**This project is open source under an MIT open source licence.**
